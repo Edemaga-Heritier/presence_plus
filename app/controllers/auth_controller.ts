@@ -22,23 +22,15 @@ export default class AuthController {
     const googleUser = await google.user()
 
     // Find or create the user in your database
-     const user = await User.firstOrCreate({
-        email: googleUser.email,
-        fullName: googleUser.name,
-        avatarUrl: googleUser.avatarUrl,
-
-
-     })
+    const user = await User.firstOrCreate({
+      email: googleUser.email,
+      fullName: googleUser.name,
+      avatarUrl: googleUser.avatarUrl,
+    })
 
     // Log the user in
     await auth.use('web').login(user)
 
     return response.redirect('/dashboard')
   }
-}
-
-
-
-
-
 }
