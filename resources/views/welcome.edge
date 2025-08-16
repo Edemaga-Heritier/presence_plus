@@ -1,0 +1,16 @@
+@extends('layouts/app')
+@section('title','Bienvenue')
+
+@section('content')
+<div class="text-center px-6 bg-gray-50 justify-center items-center flex flex-col min-h-screen">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Application de Présence</h1>
+    <p class="text-gray-500 mb-8 max-w-lg">Gérez vos présences facilement,rapidement et avec un design moderne</p> 
+    <h2 class="text-4xl font-bold mb-4">Bienvenue sur Presence Plus</h2>
+    <p class="text-lg mb-8">Connecte-toi avec ton compte Google pour marquer ta présence</p
+    <a href="{{ route('auth.redirect') }}" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition"
+    <img src="https:www.svgrepo.com/show/475656/google-color.svg " alt="Google" class="w-5 h-5 bg-white rounded-full p-0.5"> <span>Se connecter avec Google</span></a>
+</div>
+@endsection
+
+
+
